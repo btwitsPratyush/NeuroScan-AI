@@ -1,6 +1,6 @@
 # NeuroScan AI: Advanced Brain Tumor Detection System
 <div align="center">
-  <img src="https://images.unsplash.com/photo-1559757175-0eb30cd8c063?auto=format&fit=crop&q=80&w=1000" alt="Brain MRI Scan" width="600"/>
+  <img src="https://images.unsplash.com/photo-1559757175-0eb30cd8c063?auto=format&fit=crop&q=80&w=1000" alt="Brain MRI Scan" width="800"/>
 </div>
 
 
