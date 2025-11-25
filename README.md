@@ -4,6 +4,8 @@
 
 NeuroScan AI represents a breakthrough in medical imaging analysis, combining cutting-edge artificial intelligence with clinical expertise to deliver rapid, accurate brain tumor detection. Our proprietary deep learning model has been meticulously trained on a diverse dataset of over 50,000 validated MRI scans, encompassing multiple imaging protocols and patient demographics.
 
+![NeuroScan AI Screenshot](public/screenshot.jpg)
+
 The system employs advanced convolutional neural networks (CNNs) and attention mechanisms to identify and classify four primary tumor types: **Gliomas**, **Meningiomas**, **Pituitary Tumors**, and **Normal Brain Tissue**. Each scan is processed through multiple neural pathways, analyzing texture patterns, morphological features, and intensity distributions to achieve an industry-leading accuracy rate of 98.5%.
 
 What sets NeuroScan AI apart is our commitment to **explainable artificial intelligence**. Every diagnosis is accompanied by Grad-CAM visualization technology, which highlights the specific regions of interest that influenced the model's decision. This transparency empowers radiologists and neurosurgeons to validate AI findings with their clinical judgment, fostering a collaborative diagnostic approach.
