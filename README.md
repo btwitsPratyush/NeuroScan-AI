@@ -1,8 +1,5 @@
 # NeuroScan AI: Advanced Brain Tumor Detection System
-<div align="center">
-  <img src="https://images.unsplash.com/photo-1559757175-0eb30cd8c063?auto=format&fit=crop&q=80&w=1000" alt="Brain MRI Scan" width="600"/>
 
-</div>
 ![Status](https://img.shields.io/badge/Status-Development-blue) ![Tech Stack](https://img.shields.io/badge/Frontend-React%20%7C%20TS%20%7C%20Tailwind-informational) ![Backend](https://img.shields.io/badge/Backend-Python%20%7C%20Flask-success)
 ## Revolutionizing Brain Tumor Detection Through AI
 
