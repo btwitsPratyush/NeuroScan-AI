@@ -13,7 +13,8 @@ The system employs advanced convolutional neural networks (CNNs) and attention m
 ## Visuals
 
 <p align="center">
-  <img src="public/hero_screenshot.jpg" alt="Hero Section" width="45%" />
+  <img src="public/hero_screenshot.jpg" alt="Hero Section" width="22%" />
+  <img src="public/brain_visual.jpg" alt="Brain Visualization" width="22%" />
 </p>
 
 What sets NeuroScan AI apart is our commitment to **explainable artificial intelligence**. Every diagnosis is accompanied by Grad-CAM visualization technology, which highlights the specific regions of interest that influenced the model's decision. This transparency empowers radiologists and neurosurgeons to validate AI findings with their clinical judgment, fostering a collaborative diagnostic approach.
