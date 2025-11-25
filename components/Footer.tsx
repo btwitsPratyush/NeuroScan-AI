@@ -116,7 +116,7 @@ export default function Footer() {
               </p>
               <span className="hidden md:inline text-gray-600">|</span>
               <p className="text-gray-400 font-medium">
-                Made with ❤️  by PRATYUSH
+                Developed with ❤️  by PRATYUSH
               </p>
             </div>
             <div className="flex space-x-6">
