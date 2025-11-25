@@ -1,5 +1,6 @@
 # NeuroScan AI: Advanced Brain Tumor Detection System
-
+![Status](https://img.shields.io/badge/Status-Development-blue) ![Tech Stack](https://img.shields.io/badge/Frontend-React%20%7C%20TS%20%7C%20Tailwind-informational) ![Backend](https://img.shields.io/badge/Backend-Python%20%7C%20Flask-success)
+---
 ## Revolutionizing Brain Tumor Detection Through AI
 
 NeuroScan AI represents a breakthrough in medical imaging analysis, combining cutting-edge artificial intelligence with clinical expertise to deliver rapid, accurate brain tumor detection. Our proprietary deep learning model has been meticulously trained on a diverse dataset of over 50,000 validated MRI scans, encompassing multiple imaging protocols and patient demographics.
