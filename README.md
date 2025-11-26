@@ -10,7 +10,7 @@ NeuroScan AI represents a breakthrough in medical imaging analysis, combining cu
 
 The system employs advanced convolutional neural networks (CNNs) and attention mechanisms to identify and classify four primary tumor types: **Gliomas**, **Meningiomas**, **Pituitary Tumors**, and **Normal Brain Tissue**. Each scan is processed through multiple neural pathways, analyzing texture patterns, morphological features, and intensity distributions to achieve an industry-leading accuracy rate of 98.5%.
 
-## Visuals
+## Visuals:-
 
 <p align="center">
   <img src="public/hero_screenshot.jpg" alt="Hero Section" width="100%" />
