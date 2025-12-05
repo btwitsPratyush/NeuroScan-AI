@@ -1,0 +1,50 @@
+services:
+  # ---------------------------------------------------------------------------------------
+  # 1. BACKEND SERVICE (FastAPI + PyTorch)
+  # ---------------------------------------------------------------------------------------
+  - type: web
+    name: neuroscan-backend
+    env: python
+    region: singapore # Optional: Choose a region close to you (e.g., oregon, frankfurt, singapore)
+    plan: free
+    
+    # Build Command: Install dependencies
+    # We use PIP_EXTRA_INDEX_URL to download CPU-only PyTorch wheels (much smaller & faster)
+    buildCommand: pip install -r server/requirements.txt
+    
+    # Start Command: Run the FastAPI app with Uvicorn
+    startCommand: uvicorn server.app:app --host 0.0.0.0 --port $PORT
+    
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.9.0
+      - key: PIP_EXTRA_INDEX_URL
+        value: https://download.pytorch.org/whl/cpu
+
+  # ---------------------------------------------------------------------------------------
+  # 2. FRONTEND SERVICE (Vite + React)
+  # ---------------------------------------------------------------------------------------
+  - type: static
+    name: neuroscan-frontend
+    env: static
+    plan: free
+    
+    # Build Command: Install Node deps and build the Vite app
+    buildCommand: npm install && npm run build
+    
+    # Publish Directory: Where Vite outputs the build (usually 'dist')
+    staticPublishPath: ./dist
+    
+    # Routes & Rewrites
+    routes:
+      # Proxy API requests to the Backend Service
+      # NOTE: You may need to update 'neuroscan-backend' to the actual service name 
+      # if Render appends a random string (e.g. neuroscan-backend-xyz)
+      - type: rewrite
+        source: /predict
+        destination: https://neuroscan-backend.onrender.com/predict
+        
+      # SPA Fallback: Redirect all other 404s to index.html
+      - type: rewrite
+        source: /*
+        destination: /index.html

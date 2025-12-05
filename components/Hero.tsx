@@ -862,7 +862,7 @@ export default function Hero({ onStartDetectionReady }: { onStartDetectionReady?
             >
               <StatCard value="98.5%" label="Accuracy" />
               <StatCard value="<1s" label="Processing" isCyan />
-              <StatCard value="50k+" label="Scans Analyzed" />
+              <StatCard value="5k+" label="Scans Analyzed" />
             </motion.div>
           </div>
 
