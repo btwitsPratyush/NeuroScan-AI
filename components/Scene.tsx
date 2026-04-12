@@ -39,14 +39,38 @@ export default function Scene() {
         scene.add(particlesMesh);
 
         // Connecting lines
-        const lineMaterial = new THREE.LineBasicMaterial({
+        const linesGeometry = new THREE.BufferGeometry();
+        const linesMaterial = new THREE.LineBasicMaterial({
             color: 0x22d3ee,
             transparent: true,
             opacity: 0.15
         });
 
-        const linesGeometry = new THREE.BufferGeometry();
-        const linesMesh = new THREE.LineSegments(linesGeometry, lineMaterial);
+        // Calculate connections
+        const linesPositions: number[] = [];
+        const connectDistance = 1.5;
+
+        for (let i = 0; i < particlesCount; i++) {
+            for (let j = i + 1; j < particlesCount; j++) {
+                const x1 = posArray[i * 3];
+                const y1 = posArray[i * 3 + 1];
+                const z1 = posArray[i * 3 + 2];
+
+                const x2 = posArray[j * 3];
+                const y2 = posArray[j * 3 + 1];
+                const z2 = posArray[j * 3 + 2];
+
+                const dist = Math.sqrt(Math.pow(x1 - x2, 2) + Math.pow(y1 - y2, 2) + Math.pow(z1 - z2, 2));
+
+                if (dist < connectDistance) {
+                    linesPositions.push(x1, y1, z1);
+                    linesPositions.push(x2, y2, z2);
+                }
+            }
+        }
+
+        linesGeometry.setAttribute('position', new THREE.Float32BufferAttribute(linesPositions, 3));
+        const linesMesh = new THREE.LineSegments(linesGeometry, linesMaterial);
         scene.add(linesMesh);
 
         camera.position.z = 3;
@@ -69,14 +93,15 @@ export default function Scene() {
             particlesMesh.rotation.y += 0.001;
             particlesMesh.rotation.x += 0.001;
 
+            linesMesh.rotation.y += 0.001;
+            linesMesh.rotation.x += 0.001;
+
             // Gentle mouse follow
             particlesMesh.rotation.y += mouseX * 0.05;
             particlesMesh.rotation.x += mouseY * 0.05;
 
-            // Update lines dynamically (expensive but looks cool)
-            // For performance, we'll just rotate the whole group, 
-            // but a real "neural network" might update connections.
-            // Here we just keep the static cloud rotating.
+            linesMesh.rotation.y += mouseX * 0.05;
+            linesMesh.rotation.x += mouseY * 0.05;
 
             renderer.render(scene, camera);
         };
@@ -98,9 +123,9 @@ export default function Scene() {
             if (containerRef.current) {
                 containerRef.current.removeChild(renderer.domElement);
             }
-            particlesGeometry.dispose();
+            linesGeometry.dispose();
             material.dispose();
-            lineMaterial.dispose();
+            linesMaterial.dispose();
             renderer.dispose();
         };
     }, []);

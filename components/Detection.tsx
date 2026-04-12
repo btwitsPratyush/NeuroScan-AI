@@ -132,12 +132,9 @@ export default function Detection() {
                             >
                                 <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-xl blur opacity-25 group-hover:opacity-40 transition-opacity" />
                                 <div className="relative bg-white rounded-xl p-6 shadow-lg border border-blue-100 group-hover:border-blue-300 transition-all duration-300 h-full">
-                                    <div className="flex items-center justify-between mb-4">
+                                    <div className="flex items-center justify-center mb-4">
                                         <div className={`${tumor.color} w-12 h-12 rounded-lg flex items-center justify-center shadow-md`}>
                                             <CheckCircle className="w-6 h-6 text-white" />
-                                        </div>
-                                        <div className="text-2xl font-bold text-gray-900">
-                                            {tumor.prevalence}
                                         </div>
                                     </div>
 

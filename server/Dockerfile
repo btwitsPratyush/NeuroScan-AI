@@ -11,16 +11,16 @@ RUN apt-get update && apt-get install -y \
     && rm -rf /var/lib/apt/lists/*
 
 # Copy requirements and install them
-COPY server/requirements.txt requirements.txt
+COPY requirements.txt .
 
-# Install dependencies with CPU version of PyTorch to save space
+# Install dependencies (CPU version of PyTorch for smaller image size)
 RUN pip install --no-cache-dir --extra-index-url https://download.pytorch.org/whl/cpu -r requirements.txt
 
 # Copy the rest of the application
 COPY . .
 
-# Expose the default port for Hugging Face Spaces
+# Expose the port Hugging Face expects (7860 is the default for Spaces)
 EXPOSE 7860
 
-# Command to run the FastAPI app via Uvicorn
-CMD ["uvicorn", "server.app:app", "--host", "0.0.0.0", "--port", "7860"]
+# Command to run the application
+CMD ["uvicorn", "app:app", "--host", "0.0.0.0", "--port", "7860"]

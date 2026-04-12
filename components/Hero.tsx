@@ -45,7 +45,7 @@ const wordVariants = {
 };
 
 // --- Detection Steps Component ---
-function DetectionSteps({ currentStep }) {
+function DetectionSteps({ currentStep }: { currentStep: number }) {
   const steps = [
     { number: 1, title: 'Upload Image', icon: UploadCloud },
     { number: 2, title: 'Preprocessing', icon: Activity },
@@ -959,7 +959,7 @@ const UploadDropzone = ({
   onCancel: () => void;
   onFileSelect: (file: File | null) => void;
 }) => {
-  const handleFileChange = (event) => {
+  const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     if (event.target.files && event.target.files[0]) {
       const file = event.target.files[0];
       onFileSelect(file);
