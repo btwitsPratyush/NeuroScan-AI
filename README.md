@@ -1,3 +1,13 @@
+---
+title: Neuroscan Ai
+emoji: 🌖
+colorFrom: blue
+colorTo: red
+sdk: docker
+pinned: false
+license: mit
+---
+
 # NeuroScan AI: Advanced Brain Tumor Detection System
 <div align="center">
   <img src="https://images.unsplash.com/photo-1559757175-0eb30cd8c063?auto=format&fit=crop&q=80&w=1000" alt="Brain MRI Scan" width="1000"/>
@@ -54,15 +64,15 @@ What sets NeuroScan AI apart is our commitment to **explainable artificial intel
 .
 ├── public/                 # Static assets
 ├── src/
-│   ├── components/         # React components
-│   │   ├── Hero.tsx        # Main landing section
-│   │   ├── Scene.tsx       # 3D Three.js background
-│   │   ├── Header.tsx      # Navigation header
-│   │   ├── Footer.tsx      # Footer with social links
-│   │   ├── Detection.tsx   # Detection results display
-│   │   └── ...
-│   ├── App.tsx             # Main application component
-│   └── main.tsx            # Entry point
+├── components/             # React components
+│   ├── Hero.tsx            # Main landing section
+│   ├── Scene.tsx           # 3D Three.js background
+│   ├── Header.tsx          # Navigation header
+│   ├── Footer.tsx          # Footer with social links
+│   ├── Detection.tsx       # Detection results display
+│   └── ...
+├── App.tsx                 # Main application component
+├── main.tsx                # Entry point
 ├── server/                 # Backend directory
 │   ├── app.py              # FastAPI application
 │   ├── main.py             # Server entry point
@@ -70,6 +80,7 @@ What sets NeuroScan AI apart is our commitment to **explainable artificial intel
 │   └── models/             # AI model files
 ├── package.json            # Frontend dependencies
 ├── tailwind.config.js      # Tailwind configuration
+├── tsconfig.json           # TypeScript configuration
 └── vite.config.ts          # Vite configuration
 ```
 
@@ -86,9 +97,6 @@ Follow these instructions to set up and run the project locally.
 ### Frontend Setup
 
 1.  **Navigate to the project root:**
-    ```bash
-    cd /path/to/NeuroScanAI
-    ```
 2.  **Install frontend dependencies:**
     ```bash
     npm install
@@ -141,3 +149,5 @@ Follow these instructions to set up and run the project locally.
 ## License
 
 [MIT License](LICENSE)
+
+Check out the configuration reference at https://huggingface.co/docs/hub/spaces-config-reference
