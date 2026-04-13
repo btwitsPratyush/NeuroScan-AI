@@ -21,18 +21,18 @@ export default function Header({ onGetStartedClick }: { onGetStartedClick?: () =
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-200">
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
-          <div className="flex items-center space-x-3 group cursor-pointer">
+        <div className="flex justify-between items-center h-14">
+          <div className="flex items-center space-x-2.5 group cursor-pointer">
             {/* Brain Icon with subtle glow */}
             <div className="relative">
-              <div className="absolute inset-0 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-xl blur-sm opacity-40 group-hover:opacity-60 transition-opacity" />
-              <div className="relative bg-gradient-to-br from-blue-600 to-cyan-600 p-2.5 rounded-xl shadow-md group-hover:shadow-lg transition-all">
-                <Brain className="w-6 h-6 text-white" />
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-lg blur-sm opacity-40 group-hover:opacity-60 transition-opacity" />
+              <div className="relative bg-gradient-to-br from-blue-600 to-cyan-600 p-2 rounded-lg shadow-md group-hover:shadow-lg transition-all">
+                <Brain className="w-5 h-5 text-white" />
               </div>
             </div>
 
             {/* Text Logo with modern font */}
-            <span className="text-2xl font-extrabold bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent tracking-tight">
+            <span className="text-xl font-extrabold bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent tracking-tight">
               NeuroScan <span className="font-light">AI</span>
             </span>
           </div>

@@ -724,7 +724,7 @@ export default function Hero({ onStartDetectionReady }: { onStartDetectionReady?
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center pt-24 pb-12 overflow-hidden"
+      className="relative min-h-screen flex items-center pt-16 pb-4 overflow-hidden"
     >
       {/* --- ANIMATED GRADIENT BACKGROUND --- */}
       <div className="absolute inset-0 -z-10 bg-gradient-to-br from-blue-50 via-white to-cyan-50">
@@ -782,10 +782,10 @@ export default function Hero({ onStartDetectionReady }: { onStartDetectionReady?
         </svg>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 relative z-10 w-full">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 relative z-10 w-full">
+        <div className="grid lg:grid-cols-2 gap-10 items-center">
           {/* --- LEFT CONTENT --- */}
-          <div className="space-y-6">
+          <div className="space-y-5">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -835,7 +835,7 @@ export default function Hero({ onStartDetectionReady }: { onStartDetectionReady?
             </motion.p>
 
             <motion.div
-              className="flex flex-col sm:flex-row gap-4 pt-4"
+              className="flex flex-col sm:flex-row gap-4 pt-2"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 1 }}
@@ -855,7 +855,7 @@ export default function Hero({ onStartDetectionReady }: { onStartDetectionReady?
 
             {/* --- UPGRADED STATS (Glassmorphism) --- */}
             <motion.div
-              className="grid grid-cols-3 gap-4 pt-8"
+              className="grid grid-cols-3 gap-4 pt-4"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.5, delay: 1.2 }}
@@ -867,7 +867,7 @@ export default function Hero({ onStartDetectionReady }: { onStartDetectionReady?
           </div>
 
           {/* --- RIGHT VISUAL / UPLOAD ZONE --- */}
-          <div className="relative w-full h-96 lg:h-[500px]">
+          <div className="relative w-full h-80 lg:h-[450px]">
             <AnimatePresence mode="wait">
               {showDetection && uploadedFile ? (
                 <DetectionInterface
